@@ -1,0 +1,26 @@
+{
+  "name": "fastlane",
+  "version": "1.0.0",
+  "description": "Fastlane assignment made for OST on UM FERI",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.js",
+    "devstart": "nodemon index.js"
+  },
+  "keywords": [
+    "fastlane"
+  ],
+  "author": "Filip Joksovic",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "bootstrap": "^5.1.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "fs": "0.0.1-security",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.15"
+  }
+}

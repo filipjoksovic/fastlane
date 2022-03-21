@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "fname":"Filip",
+        "lname":"Joksovic",
+        "email":"filip.joksovic@student.um.si",
+        "password":"password",
+        "created_at":"date",
+        "updated_at":"date",
+        "role_id":"1"
+    }
+]
