@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("components/head.ejs")%>
+
+    <body>
+
+        <%- include('components/header.ejs') %>
+           
+                    <div class="container my-3">
+                        <h1>Register</h1>
+                        <form action="/register" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fname">First name</label>
+                                        <input type="fname" class="form-control neumorphic" name="fname" required min = "3" max = "50">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname">Last name</label>
+                                        <input type="lname" class="form-control neumorphic" name="lname" required min = "2" max = "50">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control neumorphic" required name="email" min = "5" max = "255">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" required class="form-control neumorphic">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button type="submit" class="btn neumorphic text-dark btn-primary btn-block my-3">Register</button>
+                            <p class = "bg-transparent text-center">Already have an account? Log in <a class = "bg-transparent" href='login'>here</a>.</p>
+                        </form>
+                    </div>
+
+
+    </body>
+
+</html>

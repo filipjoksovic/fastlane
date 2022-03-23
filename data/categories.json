@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"Clothing"
+    },
+    {
+        "id":2,
+        "name":"Furniture"
+    },
+    {
+        "id":3,
+        "name":"Mobile phones"
+    },
+    {
+        "id":4,
+        "name":"Compuer parts"
+    },
+    {
+        "id":5,
+        "name":"Shoes"
+    }
+]

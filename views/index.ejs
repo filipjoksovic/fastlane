@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("components/head.ejs")%>
-<body>
-    <%- include ('components/header.ejs') %> 
-    hello world
 
-</body>
+    <body>
+        <%- include ('components/header.ejs') %>
+            <div id="app">
+                <div class="container mt-3 neumorphic">
+                    <div class="row">
+                        <div class="col-md-3 p-3">
+                            <h1 class="neumorphic px-2">Filters</h1>
+                            <div class="bg-transparent">
+                                <h5 class="bg-transparent">Categories</h5>
+                                <% categories.forEach(element=> { %>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name="" id=""
+                                                value="checkedValue" onclick="filterCategory('<%=element.id%>')">
+                                            <%=element.name%>
+                                        </label>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                            <div class="bg-transparent">
+                                <h5 class="bg-transparent">Discount</h5>
+                                <% discounts.forEach(element=> { %>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name="" id=""
+                                                value="checkedValue" onclick="filterDiscount('<%=element%>')">
+                                            <%=element%>
+                                        </label>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                        </div>
+                        <div class="col-md-9 p-3 bg-transparent">
+                            <h1>Product display</h1>
+                            <div class="row mt-4" id="products">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <h5 class="modal-title bg-transparent" id="mTitle" >Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-transparent">
+                                <div class="pdata">
+                                <img id = "modalImage" class = "modal-img neumorphic">
+                                <p id = "modalDescription" class = "product-description"></p>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                              
+                                <button type="button" class="btn neumorphic btn-primary"  data-bs-dismiss="modal">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="public/js/home.js"></script>
+    </body>
+
 </html>

@@ -1,0 +1,207 @@
+html {
+    --base-neumorphic: #e0e0e0 !important;
+    --neumorphic-default: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff,
+        inset 6px 6px 12px #bebebe00,
+        inset -6px -6px 12px #ffffff00;
+    --neumorphic-pressed: 15px 15px 30px #bebebe00,
+        -15px -15px 30px #ffffff00,
+        inset 6px 6px 12px #bebebe,
+        inset -6px -6px 12px #ffffff;
+}
+
+* {
+    background-color: var(--base-neumorphic) !important;
+}
+
+.row,
+.col-md-6,
+.alert,
+.alert-success {
+    background-color: unset !important;
+}
+
+label {
+    background-color: unset !important;
+}
+
+.bg-light {
+    background-color: var(--base-neumorphic) !important;
+}
+
+.nav-custom {
+    border: none !important;
+    background-color: var(--base-neumorphic);
+    border-radius: 1rem;
+    padding: 1rem !important;
+    color: black !important;
+    box-shadow: var(--neumorphic-default) !important;
+    transition: all 250ms ease-in-out !important;
+    font-weight: 500;
+}
+
+.nav-custom:hover {
+    box-shadow: var(--neumorphic-pressed) !important;
+    /* border-radius: 2rem !important; */
+    padding: 0 2rem !important;
+}
+
+.neumorphic {
+    box-shadow: var(--neumorphic-default);
+}
+
+.neumorphic.container {
+    border-radius: 1rem;
+    padding: 2rem;
+    /* margin: 1rem; */
+}
+
+.neumorphic.form-control {
+    margin: 1rem !important;
+    padding: 1rem !important;
+    border: none !important;
+    transition: all 250ms ease-in-out !important;
+
+}
+
+.neumorphic.form-control:focus,
+.neumorphic.form-control:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    box-shadow: var(--neumorphic-pressed) !important;
+    border-radius: 1rem;
+}
+
+label.form-control {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:768px) {
+    .neumorphic.form-control {
+        margin: unset !important;
+        padding: .5rem !important;
+    }
+}
+
+.form-group {
+    margin: 1rem 0 !important;
+    background-color: transparent !important;
+}
+
+nav {
+    height: 7vh !important;
+}
+
+body {
+    height: 100vh;
+}
+
+#app {
+    height: 93vh;
+    background-color: transparent !important;
+    overflow-y: scroll;
+}
+
+#app::-webkit-scrollbar {
+    display: none;
+}
+
+#app {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.btn.neumorphic {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: block;
+    font-size: large;
+    outline: none !important;
+    border: none !important;
+    transition: all 250ms ease-in-out;
+    font-weight: 500 !important;
+}
+
+.btn.neumorphic:hover {
+    box-shadow: var(--neumorphic-pressed);
+    border-radius: 2rem;
+    width: 60%;
+}
+
+.file.neumorphic {
+    display: none !important;
+}
+
+.table-thumbnail {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    padding: .2rem !important;
+    background-color: #fff !important;
+    border-radius: .2rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.thumbnail-custom {
+    /* width: 100% !important; */
+    height: 5rem !important;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover;
+    padding: .3rem;
+    background-color: white;
+}
+
+.dataholder {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: darkred;
+}
+
+.pdata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pdata>img {
+    width: 30rem;
+    height: 30rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.pdata>p {
+    margin-top: 1rem;
+    font-size: larger;
+    background-color: transparent !important;
+}
+
+@media only screen and (max-width:768px) {
+    .pdata>img {
+        width: 20rem;
+        height: 30rem;
+        object-fit: cover;
+
+    }
+
+    .pdata>p {
+        margin-top: .5rem;
+        font-size: large;
+    }
+}

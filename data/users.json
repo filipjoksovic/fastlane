@@ -1,12 +1,1 @@
-[
-    {
-        "id":1,
-        "fname":"Filip",
-        "lname":"Joksovic",
-        "email":"filip.joksovic@student.um.si",
-        "password":"password",
-        "created_at":"date",
-        "updated_at":"date",
-        "role_id":"1"
-    }
-]
+[{"id":1,"email":"filip.joksovic@student.um.si","password":"$2b$10$dcyyT6tGFAeH8X2C75CawOYmI7fH6wUhvTjaD4lptcLeAQFK3NPQi","fname":"Filip","lname":"Joksovic","role_id":1},{"id":2,"email":"main@admin.si","password":"$2b$10$Kr81fzIrKnTmCtfp6WRS.uAMf8xtXoOJELLNfuEcCHxh7B9ce4hLO","fname":"Admin","lname":"Main","role_id":2},{"id":3,"email":"testbuyer@gmail.com","password":"$2b$10$WXuqH0Fh34gj0d0ajjjR7.XQlhsKs/8pelYuzpwkB9rYKwXirO05e","fname":"Test","lname":"Buyer","role_id":1}]

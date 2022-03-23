@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Discount 1",
+        "discount": "10",
+        "date_start": "2022-03-23",
+        "date_end": "2022-03-29",
+        "product_id": "1"
+    },
+    {
+        "name": "Discount 1",
+        "discount": "10",
+        "date_start": "2022-03-23",
+        "date_end": "2022-03-29",
+        "product_id": "3"
+    },
+    {
+        "name": "Discount 1",
+        "discount": "10",
+        "date_start": "2022-03-23",
+        "date_end": "2022-03-21",
+        "product_id": "4"
+    }
+]
