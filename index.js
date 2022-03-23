@@ -427,6 +427,22 @@ app.get("/getDiscounts", (req, res) => {
         }
     })
 })
+app.get("/getUsers",adminMiddleware,(req,res)=>{
+    let users = []
+    try{
+        users = JSON.parse(fs.readFileSync("./data/users.json"))
+        for(let i = users.length - 1;i >= 0; i--){
+            console.log(users[i])
+            if(req.session.user.id == users[i].id){
+                users.splice(i,1)
+            }
+        }
+        res.send({"users":users})
+    }
+    catch(err){
+        res.send({"error":err})
+    }
+})
 
 app.get("/cart", loggedInMiddleware, (req, res) => {
     res.render("cart", { title: "Cart" })

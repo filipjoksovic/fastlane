@@ -10,6 +10,10 @@ window.onload = () => {
         }
     })
     handleProducts()
+    fetch("/getUsers").then(response => response.json()).then(data => {
+        console.log(data)
+        handleUsers(data)
+    })
 }
 
 fetch("/getCategories").then(response => response.json()).then(data => {
@@ -67,6 +71,36 @@ function handleProducts() {
         products_table.appendChild(row)
     })
     // })
+}
+function handleUsers(data) {
+    let users = data.users
+    users.forEach(user => {
+        let tableRow = document.createElement("tr")
+
+        let idCell = document.createElement("td")
+        idCell.innerText = user.id
+
+        let fnameCell = document.createElement("td")
+        fnameCell.innerText = user.fname
+       
+        let lnameCell = document.createElement("td")
+        lnameCell.innerText = user.lname
+       
+        let emailCell = document.createElement("td")
+        emailCell.innerText = user.email
+       
+        let roleidCell = document.createElement("td")
+        roleidCell.innerText = user.role_id
+
+        tableRow.appendChild(idCell)
+        tableRow.appendChild(fnameCell)
+        tableRow.appendChild(lnameCell)
+        tableRow.appendChild(emailCell)
+        tableRow.appendChild(roleidCell)
+
+        document.querySelector("#usersTable").appendChild(tableRow)
+        
+    })
 }
 function displayProducts() {
     products = JSON.parse(localStorage.getItem("products"))
@@ -143,7 +177,7 @@ function addToDiscount() {
     let checkBoxes = container.querySelectorAll('input[type=checkbox]:checked')
     console.log(checkBoxes)
     let checkedValues = []
-    checkBoxes.forEach(checkBox=>{
+    checkBoxes.forEach(checkBox => {
         checkedValues.push(checkBox.value)
     })
     document.querySelector("#products").value = checkedValues.join(",")

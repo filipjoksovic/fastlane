@@ -18,9 +18,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
+            <% if (user.role_id != 2){%>
             <li class="nav-item">
               <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>(<span id="cartCounter">0</span>)</a>
             </li>
+            <% }%>
             <li class="nav-item"><a class="nav-link" href="/logout">
                 <%= user.fname %>
                   <%= user.lname%> - Logout

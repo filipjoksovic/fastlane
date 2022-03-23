@@ -12,8 +12,6 @@
                     <div id="nav-tab" class=" nav d-flex justify-content-between w-100 my-3 p-2 " role="tablist">
                         <button class="nav-link nav-custom active" id="nav-home-tab" data-bs-toggle="tab"
                             data-bs-target="#add-product" type="button" role="tab">Add a product</button>
-                        <button class="nav-link nav-custom" id="nav-profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#add-user" type="button" role="tab">Add a user</button>
                         <button class="nav-link nav-custom" id="nav-contact-tab" data-bs-toggle="tab"
                             data-bs-target="#add-discount" type="button" role="tab">Add a discount</button>
 
@@ -23,8 +21,6 @@
                             data-bs-target="#view-products" type="button" role="tab">View products</button>
                         <button class="nav-link nav-custom" id="nav-profile-tab" data-bs-toggle="tab"
                             data-bs-target="#view-users" type="button" role="tab">View users</button>
-                        <button class="nav-link nav-custom" id="nav-contact-tab" data-bs-toggle="tab"
-                            data-bs-target="#view-discounts" type="button" role="tab">View discounts</button>
                     </div>
                 </div>
                 <div class="container mt-5 neumorphic">
@@ -79,9 +75,7 @@
 
 
                         </div>
-                        <div class="tab-pane fade" id="add-user" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <h1><i class="fas fa-user"></i> Add a user</h1>
-                        </div>
+                        
                         <div class="tab-pane fade" id="add-discount" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <h1><i class="fas fa-tag"></i> Add a discount</h1>
                             <form action="/addDiscount" method="post">
@@ -150,10 +144,21 @@
                         </div>
                         <div class="tab-pane fade show" id="view-users" role="tabpanel" aria-labelledby="nav-home-tab">
                             <h1><i class="fas fa-users"></i> View users</h1>
-                        </div>
-                        <div class="tab-pane fade show" id="view-discounts" role="tabpanel"
-                            aria-labelledby="nav-home-tab">
-                            <h1><i class="fas fa-tags"></i> View discounts</h1>
+                            <div class = "table responsive">
+                                <table class = "table table-bordered">
+                                    <thead>
+                                        <th>ID</th>
+                                        <th>First name</th>
+                                        <th>Last name</th>
+                                        <th>Email</th>
+                                        <th>Role ID</th>
+                                    </thead>
+                                    <tbody id = "usersTable">
+                                            
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
 
                     </div>

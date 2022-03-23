@@ -17,7 +17,8 @@ html {
 .row,
 .col-md-6,
 .alert,
-.alert-success {
+.alert-success,
+li,ul,ol {
     background-color: unset !important;
 }
 

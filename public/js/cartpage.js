@@ -100,6 +100,10 @@ getProducts = async () => {
         document.querySelector("#cart_sum").setAttribute("value",cartSum)
 
     })
+    if(cart.length == 0){
+        document.querySelector("#cartForm").style.display = "none"
+        document.querySelector("#cartProducts").innerHTML = "<h1 class = 'text-center'>¯\\_(ツ)_/¯ <br> Whew...such empty. Add some items to your cart so you can proceed with checkout</h1>"
+    }
 }
 getProducts()
 
